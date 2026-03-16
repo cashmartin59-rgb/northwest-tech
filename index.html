@@ -800,6 +800,7 @@
       </ul>
       <div class="service-price">From $600</div>
       <div class="service-price-note">One-time setup + optional $69/mo hosting</div>
+      <a href="#contact" class="btn-primary" style="display:block;text-align:center;margin-top:20px;">Get Started →</a>
     </div>
 
     <div class="service-card featured">
@@ -815,6 +816,7 @@
       </ul>
       <div class="service-price">$300<span style="font-size:16px;font-weight:400;color:#475569">/mo</span></div>
       <div class="service-price-note">Cancel anytime — no long-term contract</div>
+      <a href="#contact" class="btn-primary" style="display:block;text-align:center;margin-top:20px;">Get Started →</a>
     </div>
 
     <div class="service-card">
@@ -830,6 +832,7 @@
       </ul>
       <div class="service-price">$350<span style="font-size:16px;font-weight:400;color:#94a3b8">/mo</span></div>
       <div class="service-price-note">Includes website setup + AI receptionist</div>
+      <a href="#contact" class="btn-primary" style="display:block;text-align:center;margin-top:20px;">Get Started →</a>
     </div>
   </div>
 </section>
@@ -930,10 +933,17 @@
     <h2 class="section-title">Ready to Get Your<br>Business Online?</h2>
     <p class="section-sub">Takes 10 minutes. No commitment. We'll tell you exactly what your business needs and what it costs — straight up.</p>
     <div class="cta-form">
-      <input type="text" class="cta-input" placeholder="Your name">
-      <input type="tel" class="cta-input" placeholder="Your phone number">
-      <a href="/cdn-cgi/l/email-protection#d1b9b4bdbdbe91bfbea3a5b9a6b4a2a5a5b4b2b9ffb2b0" class="btn-primary" style="white-space:nowrap">Book Free Call →</a>
+      <input type="text" class="cta-input" placeholder="Your name" id="cname">
+      <input type="tel" class="cta-input" placeholder="Your phone number" id="cphone">
+      <a href="#" class="btn-primary" style="white-space:nowrap" onclick="submitContact()">Book Free Call →</a>
     </div>
+    <script>
+    function submitContact() {
+      var name = document.getElementById('cname').value || 'A visitor';
+      var phone = document.getElementById('cphone').value || 'Not provided';
+      window.location.href = 'mailto:cash.martin59@gmail.com?subject=Free Quote Request - Northwest Tech&body=Name: ' + encodeURIComponent(name) + '%0APhone: ' + encodeURIComponent(phone) + '%0A%0AHi, I would like a free quote from Northwest Tech.';
+    }
+    </script>
     <p class="cta-note">Or call/text us directly at <strong style="color:var(--navy)">(587) 432-2274</strong> — we respond same day.</p>
   </div>
 </section>
@@ -941,6 +951,12 @@
 <!-- FOOTER -->
 <footer>
   <a href="#" class="footer-logo">Northwest<span>.</span>Tech</a>
-  <p>© 2026 Northwest Tech. Calgary, Alberta.</p>
+  <p>&copy; 2026 Northwest Tech. Calgary, Alberta.</p>
   <div style="display:flex;gap:24px;">
-    <a href="/cdn-cgi/l/email-protection#fb939e979794bb9594898f938c9e888f8f9e9893d5989a"><span cl
+    <a href="mailto:cash.martin59@gmail.com">cash.martin59@gmail.com</a>
+    <a href="tel:+15874322274">(587) 432-2274</a>
+  </div>
+</footer>
+
+</body>
+</html>
